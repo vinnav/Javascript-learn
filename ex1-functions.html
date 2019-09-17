@@ -8,26 +8,100 @@
   
   <script>
 
+// exercise 1 - http://javascript.info/function-basics
 function checkAge(age) {
   if (age > 18) {
     return true;
   } else {
-    return confirm('Did parents allow you?');
+    return 'Did parents allow you?';
   }
 }
 
-//rewrite using '?' or '||'
+// rewrite Rewrite it, to perform the same, but without if, in a single line
+// using '?' or '||'
 function checkAge2(age) {
-    return (age > 18) ? true : confirm('Did parents allow you? - checkAge2')
+    return (age > 18) ? true : 'Did parents allow you? - checkAge2'
 }
 
 function checkAge3(age) {
-    return (age > 18) || confirm('Did parents allow you? - checkAge3')
+    return (age > 18) || 'Did parents allow you? - checkAge3'
+}
+console.log("excercise 1 - Javascript.info checkAge(5)")
+console.log(checkAge(5));
+console.log(checkAge2(5));
+console.log(checkAge3(5));
+
+// excercise 2 http://javascript.info/function-basics
+// Write a function min(a,b) which returns the least of two numbers a and b.
+
+function min(a,b) {
+  if (a < b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+console.log("excercise 2 - Javascript.info - min(5,3)")
+console.log(min(5,3));
+
+// excercise 3  http://javascript.info/function-basics
+//Write a function pow(x,n) that returns x in power n. 
+
+function pow(x, n){
+  let xn=x;
+  while(n>1){
+    xn = xn*x;
+    n--;
+  }
+  return xn;
+}
+console.log("excercise 3 - Javascript.info - pow(5,3)")
+console.log(pow(5,3));
+
+
+// excercise 1 - https://www.theodinproject.com/lessons/fundamentals-part-3
+// Write a function called add7 that takes one number and returns that number + 7.
+
+function add7(a){
+  return a+7;
 }
 
-console.log(checkAge(5))
-console.log(checkAge2(5))
-console.log(checkAge3(5))
+console.log("excercise 1 - Odin - Fundamentals 3 - add7(3)")
+console.log(add7(3));
+
+// excercise 2 - https://www.theodinproject.com/lessons/fundamentals-part-3
+// Write a function called multiply that takes 2 numbers and returns their product.
+
+function multiply(a, b){
+  return(a*b);
+}
+
+console.log("excercise 2 - Odin - Fundamentals 3 - multiply(3,2)")
+console.log(multiply(3,2))
+
+// excercise 3 - https://www.theodinproject.com/lessons/fundamentals-part-3
+// Write a function called capitalize that takes a string and returns that string 
+// with only the first letter capitalized. Make sure that it can take strings that 
+// are lowercase, UPPERCASE or BoTh.
+
+function capitalize(string){
+  return string.charAt(0).toUpperCase() + string.substr(1);
+}
+
+console.log("excercise 2 - Odin - Fundamentals 3 - capitalize javascript");
+console.log("Capitalize javascript: " + capitalize("javascript"));
+
+// excercise 4 - https://www.theodinproject.com/lessons/fundamentals-part-3
+// Write a function called lastLetter that takes a string and returns the very 
+// last letter of that string: lastLetter("abcd") should return "d"
+
+function lastLetter(string){
+  return string.charAt(string.length-1);
+}
+
+console.log("excercise 2 - Odin - Fundamentals 3 - last letter javascript");
+console.log("javascript last letter: " + lastLetter("javascript"));
+
 
   </script>
 </body>
