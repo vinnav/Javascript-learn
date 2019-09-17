@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function exercises</title>
+</head>
+<body>
+  
+  <script>
+
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    return confirm('Did parents allow you?');
+  }
+}
+
+//rewrite using '?' or '||'
+function checkAge2(age) {
+    return (age > 18) ? true : confirm('Did parents allow you? - checkAge2')
+}
+
+function checkAge3(age) {
+    return (age > 18) || confirm('Did parents allow you? - checkAge3')
+}
+
+console.log(checkAge(5))
+console.log(checkAge2(5))
+console.log(checkAge3(5))
+
+  </script>
+</body>
+</html>
