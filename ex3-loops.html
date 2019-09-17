@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Loops exercises</title>
+</head>
+<body>
+  
+  <script>
+
+/* Exercise 1 - MDN - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code
+- Loop from 10 down to 0. We've provided you with an initializer — let i = 10;.
+- For each iteration, create a new paragraph and append it to the output <div>, which 
+we've selected using const output = document.querySelector('.output');. In comments, we've 
+provided you with three code lines that need to be used somewhere inside the loop:
+    - const para = document.createElement('p'); — creates a new paragraph.
+    - output.appendChild(para); — appends the paragraph to the output <div>.
+    - para.textContent = — makes the text inside the paragraph equal to whatever you put on the right-hand side.
+- Different iteration numbers require different text to be put in the paragraph for that iteration 
+(you'll need a conditional statement and multiple para.textContent = lines):
+    - If the number is 10, print "Countdown 10" to the paragraph.
+    - If the number is 0, print "Blast off!" to the paragraph.
+    - For any other number, print just the number to the paragraph.
+Remember to include an iterator! However, in this example we are counting down after each iteration, 
+not up, so you don't want i++ — how do you iterate downwards?
+*/
+
+let output = document.querySelector('.output');
+output.innerHTML = '';
+
+let i = 10;
+
+
+while(i >= 0){
+    const para = document.createElement('p'); 
+    if(i === 10){
+        para.textContent = "Countdown 10";
+
+    } else if(i === 0){
+        para.textContent = "Blast off!";
+    } else {
+        para.textContent = i;
+    }
+
+    output.appendChild(para);
+    
+    i--;
+}
+
+/* Exercise 2 - MDN - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code
+- Filling in a guest list
+
+- Write a loop that will iterate from 0 to the length of the people array. 
+You'll need to start with an initializer of  let i = 0;, but what exit condition do you need?
+- During each loop iteration, check if the current array item is equal to "Phil" or "Lola" 
+using a conditional statement:
+    - If it is, concatenate the array item to the end of the refused paragraph's textContent, 
+    followed by a comma and a space.
+    - If it isn't, concatenate the array item to the end of the admitted paragraph's textContent, 
+    followed by a comma and a space.
+*/
+
+const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+    
+const admitted = document.querySelector('.admitted');
+const refused = document.querySelector('.refused');
+admitted.textContent = 'Admit: ';
+refused.textContent = 'Refuse: '
+
+let i = 0;
+
+while (i < people.length){
+    if (people[i] == "Phil" || people[i] == "Lola"){
+        refused.textContent += people[i] + ", ";
+    } else {
+        admitted.textContent += people[i] + ", ";
+    }
+    i++;
+}
+
+refused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';
+admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';
+
+/* Exercise 3 - Javascript.info - http://javascript.info/while-for
+
+What is the last value alerted by this code? Why?
+
+let i = 3;
+while (i) {
+  alert( i-- );
+}
+
+last value is 1, while(i) stops when i = 0;
+*/
+
+/* Exercise 4 - Javascript.info - http://javascript.info/while-for
+
+For every loop iteration, write down which value it outputs and then compare it with the solution.
+Both loops alert the same values, or not?
+
+- The prefix form ++i:
+let i = 0;
+while (++i < 5) alert( i );
+
+- The postfix form i++
+let i = 0;
+while (i++ < 5) alert( i );
+
+prefix: 1, 2, 3, 4;
+postfix: 1, 2, 3, 4, 5;
+*/
+
+/* Exercise 5 - Javascript.info - http://javascript.info/while-for
+
+For each loop write down which values it is going to show. Then compare with the answer.
+Both loops alert same values or not?
+
+- The postfix form:
+for (let i = 0; i < 5; i++) alert( i );
+
+- The prefix form:
+for (let i = 0; i < 5; ++i) alert( i );
+
+postfix: 0, 1, 2, 3, 4;
+prefix: 0, 1, 2, 3, 4;
+
+/* Exercise 6 - Javascript.info - http://javascript.info/while-for
+Use the for loop to output even numbers from 2 to 10. */
+
+for(let i = 0; i <= 10; i++){
+    if(i%2 == 0){
+        alert(i);
+    }
+}
+/* Exercise 7 - Javascript.info - http://javascript.info/while-for
+Rewrite the code changing the for loop to while without altering its behavior (the output should stay same).
+
+ for (let i = 0; i < 3; i++) {
+  alert( `number ${i}!` );
+}
+*/
+
+let i = 0;
+while(i < 3){
+    alert( `number ${i}!` );
+    i++;
+}
+
+/* Exercise 8 - Javascript.info - http://javascript.info/while-for
+Write a loop which prompts for a number greater than 100. If the visitor enters another number – 
+ask them to input again.
+
+The loop must ask for a number until either the visitor enters a number greater than 100 or cancels 
+the input/enters an empty line.
+*/
+
+while(true){
+    let x = prompt("input number greater than 100:");
+    if (x > 100){
+        alert("nice");
+        break;
+    } else if (x = null){
+        break;
+        } else {
+        alert("Not greater than 100, input again:");
+        continue;
+    }
+    
+/* Exercise 9 - Javascript.info - http://javascript.info/while-for
+n > 1 is a prime if it can’t be evenly divided by anything except 1 and n.
+
+Write the code which outputs prime numbers in the interval from 2 to n.
+
+For n = 10 the result will be 2,3,5,7.
+*/
+
+let n = prompt("insert prime number");
+
+nextPrime:
+for(i = 2; i <= n; i++){
+    for(j = 2; j < i; j++){
+       if(i%j == 0){
+        continue nextPrime;
+    }
+    alert(i);
+}
+}
+
+</script>
+</body>
+</html>
