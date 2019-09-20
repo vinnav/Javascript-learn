@@ -14,4 +14,7 @@ Drum Kit
 https://vinnav.github.io/DrumKit/
 
 Clock
-https://vinnav.github.io/clock/.
+https://vinnav.github.io/clock/
+
+Etch-a-sketch
+https://vinnav.github.io/Odin-Etch-a-sketch/
