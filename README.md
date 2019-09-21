@@ -7,7 +7,7 @@ https://vinnav.github.io/google-homepage/
 Google Search Page
 https://vinnav.github.io/google-search/
 
-Rock, paper, scissor - console version
+Rock, paper, scissor
 https://vinnav.github.io/Odin-RockPaperScissor/
 
 Drum Kit
