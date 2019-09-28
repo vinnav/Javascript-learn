@@ -20,4 +20,4 @@ Etch-a-sketch
 https://vinnav.github.io/Odin-Etch-a-sketch/
 
 Calculator
-https://vinnav.github.io/odin-calculator/
+https://vinnav.github.io/Odin-calculator/
