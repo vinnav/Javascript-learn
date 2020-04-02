@@ -21,3 +21,6 @@ https://vinnav.github.io/Odin-Etch-a-sketch/
 
 Calculator
 https://vinnav.github.io/Odin-calculator/
+
+Library
+https://vinnav.github.io/Odin-Library/
