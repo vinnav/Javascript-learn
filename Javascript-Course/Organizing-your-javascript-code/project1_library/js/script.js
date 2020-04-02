@@ -56,21 +56,26 @@ function updateTable(){
         library += myLibrary[item].displayTable().replace("item", item);
     }
     document.getElementById('BookTable').innerHTML = "<thead><tr><td>Title</td><td>Author</td><td>Pages</td><td>Read</td></tr></thead>" + library;
+
+    // create nodelist of buttons
+    const buttons = document.querySelectorAll('button');
+    // for each button, add the removeBook with parameter id
+    buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        removeBook(button.id);
+    });
+    });
     
 }
 
 // Remove Books on "Remove last Book" button click
-document.getElementById("removeBook").addEventListener("click", removeBook);
-function removeBook(){
-    if(myLibrary[0]==null){
-        alert("No books to remove!")
-    }
-    myLibrary.pop()
-    updateTable()
-}
 
-function removeBookx(){
-    alert("caio")
+
+function removeBook(id){
+    if(Number.isInteger(parseInt(id))){
+    myLibrary.splice(id, 1)
+    updateTable()
+    }
 }
 
 

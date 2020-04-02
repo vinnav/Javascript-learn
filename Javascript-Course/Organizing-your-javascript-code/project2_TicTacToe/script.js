@@ -45,12 +45,14 @@ function playBox(boxPos){
         }
     }
     if(checkWin()){
-        if(playerTurn == 2){
+    if(playerTurn == 2){
             document.getElementById("pturn").innerHTML = "Player X Won!"
             //location.reload()
+            stopGame()
     } else {
         document.getElementById("pturn").innerHTML = "Player O Won!"
         //location.reload()
+        stopGame()
     }
 }
 
@@ -65,7 +67,7 @@ function checkWin(){
         return true;
     }
     // Vertical
-    else if(box0.status == box3.status && box1.status == box6.status && box1.status != 0){
+    else if(box0.status == box3.status && box0.status == box6.status && box0.status != 0){
         return true;
     } else if(box1.status == box4.status && box1.status == box7.status && box1.status != 0){
         return true;
@@ -77,6 +79,21 @@ function checkWin(){
         return true;
     } else if(box2.status == box4.status && box2.status == box6.status && box2.status != 0){
         return true;
+    // Tie
+    } else if(box1.pressed && box2.pressed && box3.pressed && box4.pressed && box5.pressed && box6.pressed && box7.pressed && box8.pressed){
+        document.getElementById("pturn").innerHTML = "It's a tie!"
     }
 }
+}
+
+function stopGame(){
+    box0.pressed = true
+    box1.pressed = true
+    box2.pressed = true
+    box3.pressed = true
+    box4.pressed = true
+    box5.pressed = true
+    box6.pressed = true
+    box7.pressed = true
+    box8.pressed = true
 }
