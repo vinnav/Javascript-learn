@@ -24,3 +24,9 @@ https://vinnav.github.io/Odin-calculator/
 
 Library
 https://vinnav.github.io/Odin-Library/
+
+TicTacToe
+https://vinnav.github.io/Odin-TicTacToe/
+
+Restaurant Page (with webpack)
+https://vinnav.github.io/Odin-RestaurantPage/.
