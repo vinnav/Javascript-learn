@@ -29,4 +29,7 @@ TicTacToe
 https://vinnav.github.io/Odin-TicTacToe/
 
 Restaurant Page (with webpack)
-https://vinnav.github.io/Odin-RestaurantPage/.
+https://vinnav.github.io/Odin-RestaurantPage/
+
+2Do
+https://vinnav.github.io/Odin-ToDo/.
