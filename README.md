@@ -32,4 +32,10 @@ Restaurant Page (with webpack)
 https://vinnav.github.io/Odin-RestaurantPage/
 
 2Do
-https://vinnav.github.io/Odin-ToDo/.
+https://vinnav.github.io/Odin-ToDo/
+
+CSS Animation
+https://vinnav.github.io/CssAnimationGame/
+
+CSS Drop down menu
+https://vinnav.github.io/DropDownMenu/
